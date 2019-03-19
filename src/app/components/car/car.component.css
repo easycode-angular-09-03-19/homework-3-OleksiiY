@@ -1,0 +1,96 @@
+.container{
+    width:90%;
+    margin:0 auto;
+}
+button {
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  padding: .7em 1.5em;
+  outline: none;
+  height:45px;
+}
+.button-section{
+    display: flex;
+}
+.drive-button {
+  background: rgb(212, 75, 56);
+}
+
+.drive-button:hover {
+  background: rgb(232, 95, 76);
+}
+
+.drive-button:active {
+  background: rgb(152, 15, 0);
+}
+
+.refuel-button {
+  background: rgb(85, 180, 41);
+}
+
+.refuel-button:hover {
+  background: rgb(102, 214, 50);
+}
+
+.refuel-button:active {
+  background: rgb(116, 245, 56);
+}
+
+ul li {
+  list-style: none
+}
+
+.list--charac li {
+  width: 40%;
+  padding: 10px 30px;
+  background: linear-gradient(to left, #f8ab8d 0%, white, #f8ab8d);
+  border-bottom: 1px solid grey;
+  color: #506a6b;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+  margin-bottom: 5px;
+}
+
+.list--charac li:last-child {
+  border-bottom: none;
+}
+
+
+
+.list-stat {
+  margin-left: 0;
+  list-style: none;
+  width: 40%;
+}
+
+.list-stat li {
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 3px solid #CADFCF;
+  padding: 0.6em;
+  border-radius: 4px;
+  background: #FEFEFE;
+  color: #231F20;
+  font-family: "Trebuchet MS", "Lucida Sans";
+}
+
+.list-stat li:before {
+  position: absolute;
+  top: -0.7em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  font-size: 16px;
+  font-weight: bold;
+  color: #DCC24B;
+  background: #FEFEFE;
+  border-radius: 50%;
+  counter-increment: li;
+  content: counter(li);
+}
+.errorMessage{
+    display: flex;
+    align-items: center;
+    color:red;
+    font-weight: 800;
+    padding-left:20px;
+}
