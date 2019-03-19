@@ -22,8 +22,8 @@ export class CarComponent {
   };
 
   public isEmptyTank: boolean = false;
-  public refuelAmount = 800;
-  public fixedDistanceDrive = 100;
+  public refuelAmount:number = 800;
+  public fixedDistanceDrive:number = 100;
   public showError: string;
   constructor() {}
 
