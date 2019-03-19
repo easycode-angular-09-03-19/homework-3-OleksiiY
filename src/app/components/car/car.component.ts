@@ -32,7 +32,7 @@ export class CarComponent {
     if (this.fixedDistanceDrive <= this.carSpec.currentAmountFuel) {
       this.carSpec.mileage += this.fixedDistanceDrive;
       this.carSpec.currentAmountFuel -= this.fixedDistanceDrive;
-      if (this.carSpec.currentAmountFuel <= 0) {
+      if (this.carSpec.currentAmountFuel <= 0 || this.carSpec.currentAmountFuel < this.fixedDistanceDrive) {
         this.isEmptyTank = true;
       }
     } else {
@@ -42,6 +42,9 @@ export class CarComponent {
   }
   public refuel(): void {
     this.carSpec.currentAmountFuel += this.refuelAmount;
+    if (this.carSpec.currentAmountFuel > this.carSpec.tank){
+      this.carSpec.currentAmountFuel = this.carSpec.tank;
+    }
     this.isEmptyTank = false;
     this.showError = "";
   }

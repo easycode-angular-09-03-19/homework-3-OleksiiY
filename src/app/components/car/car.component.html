@@ -1,7 +1,7 @@
 <div [className]="'container'">
   <div [className]="'button-section'">
     <div>
-      <button (click)="drive()" [className]="'drive-button'"> Press to drive 100 Km</button>
+      <button (click)="drive()" [className]="'drive-button'"> Press to drive {{fixedDistanceDrive + ' ' + 'km'}}</button>
     </div>
     <div *ngIf="isEmptyTank">
       <button (click)="refuel()" [className]="'refuel-button'"> Press to refuel full tank - {{carSpec.tank + ' ' +
